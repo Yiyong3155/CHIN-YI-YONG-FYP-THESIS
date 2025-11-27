@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(example_02)
+project(example_03)
 
 if (CMAKE_VERSION VERSION_LESS 3.18)
   set(DEV_MODULE Development)
