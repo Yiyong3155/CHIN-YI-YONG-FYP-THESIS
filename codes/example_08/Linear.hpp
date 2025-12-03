@@ -13,8 +13,10 @@
 
 using namespace dolfinx;
 
-template <typename T>
+template <typename T, int P>
 class LinearSpectral2D {
 public:
-    LinearSpectral2D(basix::FiniteElement<T> element);
+    LinearSpectral2D(
+        basix::FiniteElement<T> element,
+        mesh::Mesh<T> mesh);
 };

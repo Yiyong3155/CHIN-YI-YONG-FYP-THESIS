@@ -4,10 +4,14 @@
 
 namespace nb = nanobind;
 
-template <typename T>
-LinearSpectral2D<T>::LinearSpectral2D(basix::FiniteElement<T> element) {};
+template <typename T, int P>
+LinearSpectral2D<T, P>::LinearSpectral2D(
+    basix::FiniteElement<T> element,
+    mesh::Mesh<T> mesh) {};
 
 NB_MODULE(Linear, m) {
-    nb::class_<LinearSpectral2D<float>>(m, "LinearSpectral2D")
-        .def(nb::init<basix::FiniteElement<float>>());
+    nb::class_<LinearSpectral2D<float, 4>>(m, "LinearSpectral2D")
+        .def(nb::init<
+            basix::FiniteElement<float>,
+            mesh::Mesh<float>>());
 }
