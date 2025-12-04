@@ -1,4 +1,4 @@
-#include "fusx/Linear.hpp"
+#include "Linear.hpp"
 
 #include <nanobind/nanobind.h>
 #include <nanobind/stl/shared_ptr.h>
@@ -15,5 +15,7 @@ NB_MODULE(Linear, m) {
             std::shared_ptr<fem::Function<double>>,
             const double&,
             const double&,
-            const double&>());
+            const double&>())
+        .def("init", &LinearSpectral2D<double, 4>::init)
+        .def("u_sol", &LinearSpectral2D<double, 4>::u_sol);
 }
