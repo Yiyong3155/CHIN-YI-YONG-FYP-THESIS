@@ -17,5 +17,6 @@ NB_MODULE(Linear, m) {
             const double&,
             const double&>())
         .def("init", &LinearSpectral2D<double, 4>::init)
+        .def("rk4", &LinearSpectral2D<double, 4>::rk4)
         .def("u_sol", &LinearSpectral2D<double, 4>::u_sol);
 }
