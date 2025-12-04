@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(permute)
+project(wrapper)
 
 if (CMAKE_VERSION VERSION_LESS 3.18)
   set(DEV_MODULE Development)
@@ -26,5 +26,5 @@ find_package(nanobind CONFIG REQUIRED)
 
 include_directories("../.." ".")
 
-nanobind_add_module(Linear Linear.cpp)
+nanobind_add_module(Linear wrapper.cpp)
 target_link_libraries(Linear PRIVATE dolfinx basix)
