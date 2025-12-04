@@ -98,7 +98,6 @@ model.rk4(startTime, finalTime, timeStepSize)
 # Field at final time
 uh = model.u_sol()
 
-print(type(uh))
-
+# Write final solution to file
 with VTXWriter(mesh.comm, "output_final.bp", uh) as f:
     f.write(0.0)
