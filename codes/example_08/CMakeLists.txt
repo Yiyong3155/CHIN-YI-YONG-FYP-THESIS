@@ -24,7 +24,7 @@ execute_process(
   OUTPUT_STRIP_TRAILING_WHITESPACE OUTPUT_VARIABLE nanobind_ROOT)
 find_package(nanobind CONFIG REQUIRED)
 
-include_directories("../.." ".")
+include_directories("./fusx")
 
-nanobind_add_module(Linear wrapper.cpp)
+nanobind_add_module(Linear wrapper.cpp fusx/forms.c)
 target_link_libraries(Linear PRIVATE dolfinx basix)
