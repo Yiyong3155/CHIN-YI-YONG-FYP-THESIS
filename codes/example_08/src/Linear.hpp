@@ -63,8 +63,6 @@ public:
         MPI_Comm_rank(MPI_COMM_WORLD, &mpi_rank);
         MPI_Comm_size(MPI_COMM_WORLD, &mpi_size);
 
-        std::cout << "This is rank " << mpi_rank << " out of " << mpi_size << " processes.\n";
-
         // Physical parameters
         c0 = speedOfSound;
         rho0 = density;
