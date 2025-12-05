@@ -35,7 +35,8 @@ if(NOT TARGET dolfinx)
 endif()
 
 find_package(Python 3.10 
-  REQUIRED COMPONENTS Interpreter Development.Module ${DEV_MODULE} REQUIRED)
+  REQUIRED COMPONENTS Interpreter Development.Module
+  OPTIONAL_COMPONENTS Development.SABIModule)
 
 if (NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the type of build." FORCE)
@@ -48,7 +49,20 @@ execute_process(
   OUTPUT_STRIP_TRAILING_WHITESPACE OUTPUT_VARIABLE nanobind_ROOT)
 find_package(nanobind CONFIG REQUIRED)
 
-include_directories("./fusx")
+nanobind_add_module(
+  # Name of the extension
+  _fusx
+  
+  # Target the stable ABI for Python 3.12+, which reduces
+  # the number of binary wheels that must be built. This
+  # does nothing on older Python versions
+  # STABLE_ABI
 
-nanobind_add_module(Linear fusx/wrapper.cpp fusx/forms.c)
-target_link_libraries(Linear PRIVATE dolfinx basix)
+  # Source codes
+  src/fusx.cpp src/forms.c
+)
+
+target_link_libraries(_fusx PRIVATE dolfinx basix)
+
+# Install directive for scikit-build-core
+install(TARGETS _fusx LIBRARY DESTINATION fusx)
