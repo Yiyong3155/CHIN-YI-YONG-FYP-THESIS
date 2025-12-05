@@ -5,7 +5,7 @@
 
 namespace nb = nanobind;
 
-NB_MODULE(Linear, m) {
+NB_MODULE(_fusx, m) {
     nb::class_<LinearSpectral2D<double, 4>>(m, "LinearSpectral2D")
         .def(nb::init<
             basix::FiniteElement<double>,

@@ -1,1 +1,0 @@
-from ._linear import LinearSpectral2D
