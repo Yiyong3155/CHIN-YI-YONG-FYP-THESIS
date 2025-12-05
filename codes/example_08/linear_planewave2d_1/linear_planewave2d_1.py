@@ -7,7 +7,7 @@ from dolfinx.fem import Function, functionspace
 from dolfinx.io import XDMFFile, VTXWriter
 from dolfinx import cpp
 
-from Linear import LinearSpectral2D
+from fusx import LinearSpectral2D
 
 # Source parameters
 sourceFrequency = 0.5e6  # (Hz)
@@ -25,7 +25,7 @@ domainLength = 0.12  # (m)
 degreeOfBasis = 4
 
 # Read mesh and mesh tags
-with XDMFFile(MPI.COMM_WORLD, "../mesh.xdmf", "r") as fmesh:
+with XDMFFile(MPI.COMM_WORLD, "mesh.xdmf", "r") as fmesh:
     mesh_name = "planewave_2d_1"
     mesh = fmesh.read_mesh(name=f"{mesh_name}")
     tdim = mesh.topology.dim
