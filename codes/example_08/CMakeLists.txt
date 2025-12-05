@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
-project(wrapper)
+project(fusx)
+
+# Set flags
+set(CMAKE_CXX_FLAGS "-Ofast -march=native ${CMAKE_CXX_FLAGS} -Wall")
+set(CMAKE_C_FLAGS "-Ofast -march=native ${CMAKE_C_FLAGS} -Wall")
 
 if (NOT SKBUILD)
   message(WARNING "\
@@ -22,12 +26,6 @@ if (NOT SKBUILD)
   You may optionally add -Ceditable.rebuild=true to auto-rebuild when
   the package is imported. Otherwise, you need to rerun the above
   after editing C++ files.")
-endif()
-
-if (CMAKE_VERSION VERSION_LESS 3.18)
-  set(DEV_MODULE Development)
-else()
-  set(DEV_MODULE Development.Module)
 endif()
 
 if(NOT TARGET dolfinx)
@@ -62,7 +60,7 @@ nanobind_add_module(
   src/fusx.cpp src/forms.c
 )
 
-target_link_libraries(_fusx PRIVATE dolfinx basix)
+target_link_libraries(_fusx PRIVATE dolfinx)
 
 # Install directive for scikit-build-core
 install(TARGETS _fusx LIBRARY DESTINATION fusx)
