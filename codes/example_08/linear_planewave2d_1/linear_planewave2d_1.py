@@ -3,6 +3,7 @@ from mpi4py import MPI
 
 import basix
 import basix.ufl
+from dolfinx.common import Timer
 from dolfinx.fem import Function, functionspace
 from dolfinx.io import XDMFFile, VTXWriter
 from dolfinx import cpp
@@ -61,7 +62,7 @@ timeStepSize = CFL * meshSize / (speedOfSound * degreeOfBasis**2)
 stepPerPeriod = int(period / timeStepSize + 1)
 timeStepSize = period / stepPerPeriod
 startTime = 0.0
-finalTime = (domainLength / speedOfSound + 4.0 / sourceFrequency)/6
+finalTime = domainLength / speedOfSound + 4.0 / sourceFrequency
 numberOfStep = int((finalTime - startTime) / timeStepSize + 1)
 
 if MPI.COMM_WORLD.rank == 0:
@@ -93,7 +94,10 @@ model = LinearSpectral2D(
 model.init()
 
 # Run simulation
-model.rk4(startTime, finalTime, timeStepSize)
+with Timer() as tsolve:
+    model.rk4(startTime, finalTime, timeStepSize)
+
+print("Solver time: ", tsolve.elapsed()[0])
 
 # Field at final time
 uh = model.u_sol()
