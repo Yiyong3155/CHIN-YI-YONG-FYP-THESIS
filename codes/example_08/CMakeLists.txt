@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 project(fusx)
 
-# Set flags
-set(CMAKE_CXX_FLAGS "-Ofast -march=native ${CMAKE_CXX_FLAGS} -Wall")
-set(CMAKE_C_FLAGS "-Ofast -march=native ${CMAKE_C_FLAGS} -Wall")
-
 if (NOT SKBUILD)
   message(WARNING "\
   This CMake file is meant to be executed using 'scikit-build-core'.
@@ -61,6 +57,10 @@ nanobind_add_module(
 )
 
 target_link_libraries(_fusx PRIVATE dolfinx)
+
+target_compile_options(
+  _fusx PRIVATE -Ofast -march=native
+)
 
 # Install directive for scikit-build-core
 install(TARGETS _fusx LIBRARY DESTINATION fusx)
