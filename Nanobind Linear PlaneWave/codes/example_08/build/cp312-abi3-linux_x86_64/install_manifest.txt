@@ -1,0 +1,1 @@
+/tmp/tmpccthsk27/wheel/platlib/fusx/_fusx.cpython-312-x86_64-linux-gnu.so

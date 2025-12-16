@@ -1,0 +1,8 @@
+/home/shared/codes/example_08/build/cp312-abi3-linux_x86_64/CMakeFiles/_fusx.dir
+/home/shared/codes/example_08/build/cp312-abi3-linux_x86_64/CMakeFiles/nanobind-static.dir
+/home/shared/codes/example_08/build/cp312-abi3-linux_x86_64/CMakeFiles/edit_cache.dir
+/home/shared/codes/example_08/build/cp312-abi3-linux_x86_64/CMakeFiles/rebuild_cache.dir
+/home/shared/codes/example_08/build/cp312-abi3-linux_x86_64/CMakeFiles/list_install_components.dir
+/home/shared/codes/example_08/build/cp312-abi3-linux_x86_64/CMakeFiles/install.dir
+/home/shared/codes/example_08/build/cp312-abi3-linux_x86_64/CMakeFiles/install/local.dir
+/home/shared/codes/example_08/build/cp312-abi3-linux_x86_64/CMakeFiles/install/strip.dir
