@@ -1,0 +1,21 @@
+{
+  "region_bounds": {
+    "xmin": 0.0,
+    "xmax": 0.03,
+    "ymin": -0.035,
+    "ymax": 0.035
+  },
+  "clip_filter_params": {
+    "position": [
+      0.0,
+      -0.035,
+      0
+    ],
+    "length": [
+      0.03,
+      0.07,
+      0.001
+    ]
+  },
+  "instructions": "Use Filters->Clip->Box with the clip_filter_params above"
+}

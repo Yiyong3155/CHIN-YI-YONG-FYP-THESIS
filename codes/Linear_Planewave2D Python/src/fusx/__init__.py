@@ -1,0 +1,1 @@
+from ._fusx import LinearSpectral2D

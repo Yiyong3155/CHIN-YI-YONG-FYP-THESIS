@@ -1,0 +1,28 @@
+# Build artifacts
+build/
+*.egg-info/
+dist/
+*.so
+*.o
+__pycache__/
+*.pyc
+
+# Data files
+data/
+data_real/
+*.bp/
+
+# Output files
+output_*.bp
+*.txt
+
+# Python
+.pytest_cache/
+.venv/
+venv/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~

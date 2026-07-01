@@ -1,0 +1,107 @@
+Using pip 24.2 from /dolfinx-env/lib/python3.12/site-packages/pip (python 3.12)
+Obtaining file:///home/shared/example_08
+  Checking if build backend supports build_editable: started
+  Running command Checking if build backend supports build_editable
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Running command Preparing editable metadata (pyproject.toml)
+  *** scikit-build-core 0.10.7 using CMake 3.28.3 (metadata_editable)
+  2026-03-16 11:05:28,856 - scikit_build_core - WARNING - No license files found, set wheel.license-files to [] to suppress this warning
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: fusx
+  Building editable for fusx (pyproject.toml): started
+  Running command Building editable for fusx (pyproject.toml)
+  *** scikit-build-core 0.10.7 using CMake 3.28.3 (editable)
+  2026-03-16 11:05:29,232 - scikit_build_core - WARNING - No license files found, set wheel.license-files to [] to suppress this warning
+  *** Configuring CMake...
+  loading initial cache file build/cp312-abi3-linux_x86_64/CMakeInit.txt
+  -- The C compiler identification is GNU 13.2.0
+  -- The CXX compiler identification is GNU 13.2.0
+  -- Detecting C compiler ABI info
+  -- Detecting C compiler ABI info - done
+  -- Check for working C compiler: /usr/bin/x86_64-linux-gnu-gcc - skipped
+  -- Detecting C compile features
+  -- Detecting C compile features - done
+  -- Detecting CXX compiler ABI info
+  -- Detecting CXX compiler ABI info - done
+  -- Check for working CXX compiler: /usr/bin/x86_64-linux-gnu-g++ - skipped
+  -- Detecting CXX compile features
+  -- Detecting CXX compile features - done
+  -- Found MPI_C: /usr/local/lib/libmpi.so (found version "4.1")
+  -- Found MPI_CXX: /usr/local/lib/libmpicxx.so (found version "4.1")
+  -- Found MPI: TRUE (found version "4.1")
+  -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+  -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+  -- Found Threads: TRUE
+  -- Found Boost 1.83.0 at /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0
+  --   Requested configuration: QUIET REQUIRED COMPONENTS timer
+  -- Found boost_headers 1.83.0 at /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0
+  -- Found boost_timer 1.83.0 at /usr/lib/x86_64-linux-gnu/cmake/boost_timer-1.83.0
+  --   [x] libboost_timer.so.1.83.0
+  --   [ ] libboost_timer.a
+  -- Adding boost_timer dependencies: headers
+  -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found suitable version "1.83.0", minimum required is "1.70") found components: timer
+  -- Checking for Basix hints with /dolfinx-env/bin/python3
+  -- Adding /dolfinx-env/lib/python3.12/site-packages/basix to Basix search hints
+  -- Found HDF5 at /usr/local/cmake via NO_MODULE. Now trying to extract locations etc.
+  -- Trying to get properties of target hdf5-shared
+  -- Found imported configurations: RELEASE
+  -- Start search through imported configurations in the following order: Release;RELWITHDEBINFO;RELEASE;DEBUG;RELEASE
+  -- Selected imported configuration: RELEASE
+  -- Found HDF5: hdf5-shared (found version "1.14.4") found components: C
+  -- HDF5_DIR: /usr/local/cmake
+  -- HDF5_DEFINITIONS:
+  -- HDF5_INCLUDE_DIRS: /usr/local/include
+  -- HDF5_LIBRARIES: hdf5-shared
+  -- HDF5_HL_LIBRARIES:
+  -- HDF5_C_DEFINITIONS:
+  -- HDF5_C_INCLUDE_DIR:
+  -- HDF5_C_INCLUDE_DIRS: /usr/local/include
+  -- HDF5_C_LIBRARY: /usr/local/lib/libhdf5.so.310.4.0
+  -- HDF5_C_LIBRARIES: hdf5-shared
+  -- HDF5_C_HL_LIBRARY:
+  -- HDF5_C_HL_LIBRARIES:
+  -- Defined targets (if any):
+  -- ... hdf5::hdf5
+  -- ... hdf5-static
+  -- ... hdf5-shared
+  -- ... hdf5_hl-static
+  -- ... hdf5_hl-shared
+  -- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1")
+  -- Checking for one of the modules 'PETSc;petsc'
+  -- Checking for one of the modules 'SLEPc;slepc'
+  -- Found ADIOS2: /usr/local/lib/cmake/adios2/adios2-config.cmake (found suitable version "2.10.1", minimum required is "2.8.1") found components: C CXX MPI
+  -- Found Python: /dolfinx-env/bin/python3 (found suitable version "3.12.3", minimum required is "3.10") found components: Interpreter Development.Module Development.SABIModule
+  -- Configuring done (3.9s)
+  -- Generating done (0.0s)
+  -- Build files have been written to: /home/shared/example_08/build/cp312-abi3-linux_x86_64
+  *** Building project with Ninja...
+  [1/14] Building C object CMakeFiles/_fusx.dir/src/forms.c.o
+  [2/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/implicit.cpp.o
+  [3/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.o
+  [4/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.o
+  [5/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/error.cpp.o
+  [6/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.o
+  [7/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.o
+  [8/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/common.cpp.o
+  [9/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.o
+  [10/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.o
+  [11/14] Building CXX object CMakeFiles/nanobind-static.dir/dolfinx-env/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.o
+  [12/14] Linking CXX static library libnanobind-static.a
+  [13/14] Building CXX object CMakeFiles/_fusx.dir/src/fusx.cpp.o
+  [14/14] Linking CXX shared module _fusx.cpython-312-x86_64-linux-gnu.so
+  *** Installing project into wheel...
+  -- Install configuration: "Release"
+  -- Installing: /tmp/tmpsa2_hstj/wheel/platlib/fusx/_fusx.cpython-312-x86_64-linux-gnu.so
+  -- Set non-toolchain portion of runtime path of "/tmp/tmpsa2_hstj/wheel/platlib/fusx/_fusx.cpython-312-x86_64-linux-gnu.so" to ""
+  *** Making editable...
+  *** Created fusx-0.0.1-cp312-abi3-linux_x86_64.whl
+  Building editable for fusx (pyproject.toml): finished with status 'done'
+  Created wheel for fusx: filename=fusx-0.0.1-cp312-abi3-linux_x86_64.whl size=273446 sha256=70897293b14a5768379bfa51a44fbf4638ee3acf50e208edf22be0395f61bee5
+  Stored in directory: /tmp/pip-ephem-wheel-cache-195wb4wt/wheels/4a/b5/ea/bbb7bcfa0b0605262b06fba9c363a2a61ca888d05a362cc278
+Successfully built fusx
+Installing collected packages: fusx
+Successfully installed fusx-0.0.1
+
+[notice] A new release of pip is available: 24.2 -> 26.0.1
+[notice] To update, run: pip install --upgrade pip

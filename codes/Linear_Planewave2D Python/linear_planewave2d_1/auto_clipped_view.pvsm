@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ParaView>
+  <ServerManagerState version="5.11.0">
+    <Proxy group="sources" type="VTXReader" id="1" servers="1">
+      <Property name="FileName" id="1.FileName" number_of_elements="1">
+        <Element index="0" value="/home/shared/example_08/linear_planewave2d_1/output_with_region.bp/data.vtx"/>
+      </Property>
+    </Proxy>
+    <Proxy group="filters" type="Clip" id="2" servers="1">
+      <Property name="Input" id="2.Input">
+        <Proxy value="1"/>
+      </Property>
+      <Property name="ClipType" id="2.ClipType">
+        <Proxy value="3"/>
+      </Property>
+      <Property name="Invert" id="2.Invert" number_of_elements="1">
+        <Element index="0" value="0"/>
+      </Property>
+    </Proxy>
+    <Proxy group="implicit_functions" type="Box" id="3" servers="1">
+      <Property name="Position" id="3.Position" number_of_elements="3">
+        <Element index="0" value="0.0"/>
+        <Element index="1" value="-0.035"/>
+        <Element index="2" value="0"/>
+      </Property>
+      <Property name="Length" id="3.Length" number_of_elements="3">
+        <Element index="0" value="0.03"/>
+        <Element index="1" value="0.07"/>
+        <Element index="2" value="0.001"/>
+      </Property>
+    </Proxy>
+  </ServerManagerState>
+</ParaView>
